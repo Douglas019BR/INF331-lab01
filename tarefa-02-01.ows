@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="Food Intake" position="(75.0, 79.0)" />
+		<node id="1" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="FCID Code Description" position="(76.0, 189.0)" />
+		<node id="2" name="Merge Data" qualified_name="Orange.widgets.data.owmergedata.OWMergeData" project_name="Orange3" version="" title="Merge with FCID Code" position="(259.0, 86.0)" />
+		<node id="3" name="Select Rows" qualified_name="Orange.widgets.data.owselectrows.OWSelectRows" project_name="Orange3" version="" title="Select by food name" position="(418.0, 86.0)" />
+		<node id="4" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="Ethnicity" position="(413.0, 205.0)" />
+		<node id="5" name="Merge Data" qualified_name="Orange.widgets.data.owmergedata.OWMergeData" project_name="Orange3" version="" title="Merge with Ethnicity" position="(617.0, 91.0)" />
+		<node id="6" name="Box Plot" qualified_name="Orange.widgets.visualize.owboxplot.OWBoxPlot" project_name="Orange3" version="" title="Box Plot Food Consumption by Ethnicity" position="(768.0, 91.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="0" sink_node_id="2" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="1" source_node_id="1" sink_node_id="2" source_channel="Data" sink_channel="Extra Data" enabled="true" source_channel_id="data" sink_channel_id="extra_data" />
+		<link id="2" source_node_id="2" sink_node_id="3" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="3" source_node_id="3" sink_node_id="5" source_channel="Matching Data" sink_channel="Data" enabled="true" source_channel_id="matching_data" sink_channel_id="data" />
+		<link id="4" source_node_id="4" sink_node_id="5" source_channel="Data" sink_channel="Extra Data" enabled="true" source_channel_id="data" sink_channel_id="extra_data" />
+		<link id="5" source_node_id="5" sink_node_id="6" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'AbsPath', 'path': '/home/doug/INF331/lab2learn/workflow/orange/food-intake/grouped/intake-person-demo.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Categorical'}, {'start': 1, 'stop': 2, 'value': 'Numeric'}, {'start': 2, 'stop': 4, 'value': 'Categorical'}, {'start': 4, 'stop': 7, 'value': 'Numeric'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'grouped/intake-person-demo.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Categorical'}, {'start': 1, 'stop': 2, 'value': 'Numeric'}, {'start': 2, 'stop': 4, 'value': 'Categorical'}, {'start': 4, 'stop': 7, 'value': 'Numeric'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'lab2learn/workflow/orange/food-intake/grouped/intake-person-demo.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Categorical'}, {'start': 1, 'stop': 2, 'value': 'Numeric'}, {'start': 2, 'stop': 4, 'value': 'Categorical'}, {'start': 4, 'stop': 7, 'value': 'Numeric'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': '/home/doug/INF331/lab2learn/workflow/orange/food-intake/grouped', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\xde\x00\x00\x00u\x00\x00\x02\x17\x00\x00\x01\xec\x00\x00\x00\xde\x00\x00\x00\x9a\x00\x00\x02\x17\x00\x00\x01\xec\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x00\xde\x00\x00\x00\x9a\x00\x00\x02\x17\x00\x00\x01\xec', '__version__': 3}</properties>
+		<properties node_id="1" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'AbsPath', 'path': '/home/doug/INF331/lab2learn/workflow/orange/food-intake/basics/FCID_Code_Description.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Numeric'}, {'start': 1, 'stop': 4, 'value': 'Categorical'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'basics/FCID_Code_Description.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 4, 'value': 'Categorical'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'basics/Food_Code_Description.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 3, 'value': 'Categorical'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'lab2learn/workflow/orange/food-intake/basics/FCID_Code_Description.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 2, 'value': 'Text'}, {'start': 2, 'stop': 4, 'value': 'Categorical'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': '/home/doug/INF331/lab2learn/workflow/orange/food-intake/basics', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\xd2\x00\x00\x01\x8b\x00\x00\x03\x0b\x00\x00\x02\xdd\x00\x00\x01\xd2\x00\x00\x01\x8b\x00\x00\x03\x0b\x00\x00\x02\xdd\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x01\xd2\x00\x00\x01\x8b\x00\x00\x03\x0b\x00\x00\x02\xdd', '__version__': 3}</properties>
+		<properties node_id="2" format="pickle">gASV4gMAAAAAAAB9lCiMCmF1dG9fYXBwbHmUiIwSY29udHJvbEFyZWFWaXNpYmxllIiMB21lcmdp
+bmeUSwCME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAs8AAAGCAAAEaAAAApoAAALP
+AAABggAABGgAAAKaAAAAAAAAAAAHgAAAAs8AAAGCAAAEaAAAApqUjAtfX3ZlcnNpb25fX5RLAowQ
+Y29udGV4dF9zZXR0aW5nc5RdlCiMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5Qp
+gZR9lCiMBnZhbHVlc5R9lCiMCmF0dHJfcGFpcnOUXZRdlCiMCWZjaWRfY29kZZRLZYaUjAlGQ0lE
+X0NvZGWUS2WGlGVhaAZLAnWMCnZhcmlhYmxlczGUfZQoaBNLZYwDYWdllEtmjAZnZW5kZXKUS2WM
+CWV0aG5pY2l0eZRLZYwGaGVpZ2h0lEtmjApib2R5d2VpZ2h0lEtmjAlpbnRha2VfYneUS2Z1jAp2
+YXJpYWJsZXMylH2UKIwDY2dulEtmjAtDR19TdWJncm91cJRLZWgVS2WMCUZDSURfRGVzY5RLZXV1
+YmgLKYGUfZQoaA59lChoEF2UXZQojAlmY2lkX2NvZGWUS2WGlIwJRkNJRF9Db2RllEtlhpRlYWgG
+SwJ1aBd9lChoKUtljANhZ2WUS2aMBmdlbmRlcpRLZYwJZXRobmljaXR5lEtljAZoZWlnaHSUS2aM
+CmJvZHl3ZWlnaHSUS2aMCWludGFrZV9id5RLZnVoH32UKIwDY2dulEtljAtDR19TdWJncm91cJRL
+ZYwJRkNJRF9Db2RllEtljAlGQ0lEX0Rlc2OUS2V1dWJoCymBlH2UKGgOfZQoaBBdlF2UKIwJZmNp
+ZF9jb2RllEtlhpSMCUZDSURfQ29kZZRLZYaUZWFoBksCdWgXfZQoaD5LZYwDYWdllEtmjAZnZW5k
+ZXKUS2WMCWV0aG5pY2l0eZRLZYwGaGVpZ2h0lEtmjApib2R5d2VpZ2h0lEtmjAlpbnRha2VfYneU
+S2Z1aB99lChoQEtljAlGQ0lEX0Rlc2OUS2WMA2NnbpRLZ4wLQ0dfU3ViZ3JvdXCUS2d1dWJoCymB
+lH2UKGgOfZQojAphdHRyX3BhaXJzlF2UXZQojAlSb3cgaW5kZXiUS2SGlGhTS2SGlGVhaAZLAnVo
+F32UKGgpS2VoLktmaC9LZWgwS2VoMUtmaDJLZmgzS2Z1aB99lCiMCUZvb2RfQ29kZZRLZYwQRm9v
+ZF9BYmJyZXZfRGVzY5RLZYwJRm9vZF9EZXNjlEtldXViZXUu
+</properties>
+		<properties node_id="3" format="pickle">gASV9QMAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBBwdXJn
+ZV9hdHRyaWJ1dGVzlImMDXB1cmdlX2NsYXNzZXOUiYwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ
+0MsAAwAAAAAE0gAAAKgAAAbUAAABwAAABNIAAADNAAAG1AAAAcAAAAAAAAAAAAeAAAAE0gAAAM0A
+AAbUAAABwJSMEHVwZGF0ZV9vbl9jaGFuZ2WUiIwLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0
+dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1
+ZXOUfZQojApjb25kaXRpb25zlF2UKIwJRkNJRF9EZXNjlEsBSwBdlIwKR29hdCwgbWVhdJRhdJRh
+aAhLAnWMCmF0dHJpYnV0ZXOUfZQojAlmY2lkX2NvZGWUSwGMA2FnZZRLAowGZ2VuZGVylEsBjAll
+dGhuaWNpdHmUSwGMBmhlaWdodJRLAowKYm9keXdlaWdodJRLAowJaW50YWtlX2J3lEsCjANjZ26U
+SwKMC0NHX1N1Ymdyb3VwlEsBaBRLAXWMBW1ldGFzlH2UdWJoDSmBlH2UKGgQfZQojApjb25kaXRp
+b25zlF2UKIwJRkNJRF9EZXNjlEsBSwBdlIwGRmVpam9hlGF0lGFoCEsCdWgYfZQojAlmY2lkX2Nv
+ZGWUSwGMA2FnZZRLAowGZ2VuZGVylEsBjAlldGhuaWNpdHmUSwGMBmhlaWdodJRLAowKYm9keXdl
+aWdodJRLAowJaW50YWtlX2J3lEsCjANjZ26USwGMC0NHX1N1Ymdyb3VwlEsBjAlGQ0lEX0Rlc2OU
+SwF1aCN9lHViaA0pgZR9lChoEH2UKIwKY29uZGl0aW9uc5RdlCiMCUZDSURfRGVzY5RLAUsAXZSM
+DVBvdGF0bywgY2hpcHOUYXSUYWgISwJ1aBh9lCiMCWZjaWRfY29kZZRLAYwDYWdllEsCjAZnZW5k
+ZXKUSwGMCWV0aG5pY2l0eZRLAYwGaGVpZ2h0lEsCjApib2R5d2VpZ2h0lEsCjAlpbnRha2VfYneU
+SwJoP0sBdWgjfZQojANjZ26USwOMC0NHX1N1Ymdyb3VwlEsDdXViaA0pgZR9lChoEH2UKGgoXZQo
+jAlGb29kX0Rlc2OUSwFLAF2UjACUYXSUYWgISwJ1aBh9lChoL0sBaDBLAmgxSwFoMksBaDNLAmg0
+SwJoNUsCjAlGb29kX0NvZGWUSwGMEEZvb2RfQWJicmV2X0Rlc2OUSwFoUksBdWgjfZR1YmV1Lg==
+</properties>
+		<properties node_id="4" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'AbsPath', 'path': '/home/doug/INF331/lab2learn/workflow/orange/food-intake/people/ethnicity.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 2, 'value': 'Categorical'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'VarPath', 'name': 'basedir', 'relpath': 'people/ethnicity.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 2, 'value': 'Categorical'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': '/home/doug/orange3/C:/Users/vitorgomes/Pós Unicamp/INF331/lab2learn/workflow/orange/food-intake/people/ethnicity.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 2, 'value': 'Categorical'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': '/home/doug/INF331/lab2learn/workflow/orange/food-intake/people', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x88\x00\x00\x00\xf2\x00\x00\x02\xc1\x00\x00\x02D\x00\x00\x01\x88\x00\x00\x00\xf2\x00\x00\x02\xc1\x00\x00\x02D\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x01\x88\x00\x00\x00\xf2\x00\x00\x02\xc1\x00\x00\x02D', '__version__': 3}</properties>
+		<properties node_id="5" format="pickle">gASVKAQAAAAAAAB9lCiMCmF1dG9fYXBwbHmUiIwSY29udHJvbEFyZWFWaXNpYmxllIiMB21lcmdp
+bmeUSwCME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAwYAAAE5AAAEsQAAAnYAAAMG
+AAABXgAABLEAAAJ2AAAAAAAAAAAHgAAAAwYAAAFeAAAEsQAAAnaUjAtfX3ZlcnNpb25fX5RLAowQ
+Y29udGV4dF9zZXR0aW5nc5RdlCiMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5Qp
+gZR9lCiMBnZhbHVlc5R9lCiMCmF0dHJfcGFpcnOUXZRdlCiMCWV0aG5pY2l0eZRLZYaUjA5ldGhu
+aWNpdHlfY29kZZRLZYaUZWFoBksCdYwKdmFyaWFibGVzMZR9lCiMCWZjaWRfY29kZZRLZYwDYWdl
+lEtmjAZnZW5kZXKUS2VoE0tljAZoZWlnaHSUS2aMCmJvZHl3ZWlnaHSUS2aMCWludGFrZV9id5RL
+ZowDY2dulEtmjAtDR19TdWJncm91cJRLZYwJRkNJRF9EZXNjlEtldYwKdmFyaWFibGVzMpR9lCho
+FUtljBVldGhuaWNpdHlfZGVzY3JpcHRpb26US2V1dWJoCymBlH2UKGgOfZQoaBBdlF2UKIwJZXRo
+bmljaXR5lEtlhpSMDmV0aG5pY2l0eV9jb2RllEtlhpRlYWgGSwJ1aBd9lCiMCWZjaWRfY29kZZRL
+ZYwDYWdllEtmjAZnZW5kZXKUS2VoKktljAZoZWlnaHSUS2aMCmJvZHl3ZWlnaHSUS2aMCWludGFr
+ZV9id5RLZowDY2dulEtljAtDR19TdWJncm91cJRLZYwJRkNJRF9EZXNjlEtldWgifZQoaCxLZYwV
+ZXRobmljaXR5X2Rlc2NyaXB0aW9ulEtldXViaAspgZR9lChoDn2UKGgQXZRdlChoKktlhpRoLEtl
+hpRlYWgGSwJ1aBd9lChoL0tlaDBLZmgxS2VoKktlaDJLZmgzS2ZoNEtmjAlGb29kX0NvZGWUS2WM
+EEZvb2RfQWJicmV2X0Rlc2OUS2WMCUZvb2RfRGVzY5RLZXVoIn2UKGgsS2VoOUtldXViaAspgZR9
+lChoDn2UKGgQXZRdlCiMCWV0aG5pY2l0eZRLZYaUjA5ldGhuaWNpdHlfY29kZZRLZYaUZWFoBksC
+dWgXfZQojAlmY2lkX2NvZGWUS2WMA2FnZZRLZowGZ2VuZGVylEtlaEtLZYwGaGVpZ2h0lEtmjApi
+b2R5d2VpZ2h0lEtmjAlpbnRha2VfYneUS2aMCUZDSURfRGVzY5RLZYwDY2dulEtnjAtDR19TdWJn
+cm91cJRLZ3VoIn2UKGhNS2WMFWV0aG5pY2l0eV9kZXNjcmlwdGlvbpRLZXV1YmV1Lg==
+</properties>
+		<properties node_id="6" format="pickle">gASV0AQAAAAAAAB9lCiMB2NvbXBhcmWUSwCMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNvcmRlcl9i
+eV9pbXBvcnRhbmNllImMHG9yZGVyX2dyb3VwaW5nX2J5X2ltcG9ydGFuY2WUiYwTc2F2ZWRXaWRn
+ZXRHZW9tZXRyeZRDQgHZ0MsAAwAAAAABmAAAAjkAAAYbAAAEEAAAAZgAAAJeAAAGGwAABBAAAAAA
+AAAAAAeAAAABmAAAAl4AAAYbAAAEEJSMEHNob3dfYW5ub3RhdGlvbnOUiYwLc2hvd19sYWJlbHOU
+iIwNc2lnX3RocmVzaG9sZJRHP6mZmZmZmZqMCnNvcnRfZnJlcXOUiYwIc3RhdHRlc3SUSwCMCXN0
+cmV0Y2hlZJSIjAtfX3ZlcnNpb25fX5RLAYwQY29udGV4dF9zZXR0aW5nc5RdlCiMFW9yYW5nZXdp
+ZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9lCiMCWF0dHJpYnV0ZZSM
+CWludGFrZV9id5RLZoaUjAlncm91cF92YXKUjBVldGhuaWNpdHlfZGVzY3JpcHRpb26US2WGlIwJ
+c2VsZWN0aW9ulClK/v///4aUaA1LAXWMCmF0dHJpYnV0ZXOUfZQojAlmY2lkX2NvZGWUSwGMA2Fn
+ZZRLAowGZ2VuZGVylEsBjAlldGhuaWNpdHmUSwGMBmhlaWdodJRLAowKYm9keXdlaWdodJRLAmgY
+SwKMA2NnbpRLAowLQ0dfU3ViZ3JvdXCUSwGMCUZDSURfRGVzY5RLAWgbSwF1jAVtZXRhc5R9lHVi
+aBIpgZR9lChoFX2UKIwJYXR0cmlidXRllIwJaW50YWtlX2J3lEtmhpSMCWdyb3VwX3ZhcpSMFWV0
+aG5pY2l0eV9kZXNjcmlwdGlvbpRLZYaUjAlzZWxlY3Rpb26UKUr+////hpRoDUsBdWgffZQojAlm
+Y2lkX2NvZGWUSwGMA2FnZZRLAowGZ2VuZGVylEsBjAlldGhuaWNpdHmUSwGMBmhlaWdodJRLAowK
+Ym9keXdlaWdodJRLAmgwSwKMA2NnbpRLAYwLQ0dfU3ViZ3JvdXCUSwGMCUZDSURfRGVzY5RLAWgz
+SwF1aCp9lHViaBIpgZR9lChoFX2UKGgvaDBLZoaUaDJoM0tlhpRoNSlK/v///4aUaA1LAXVoH32U
+KGg4SwFoOUsCaDpLAWg7SwFoPEsCaD1LAmgwSwKMCUZvb2RfQ29kZZRLAYwQRm9vZF9BYmJyZXZf
+RGVzY5RLAYwJRm9vZF9EZXNjlEsBaDNLAXVoKn2UdWJoEimBlH2UKGgVfZQojAlhdHRyaWJ1dGWU
+jAlpbnRha2VfYneUS2aGlIwJZ3JvdXBfdmFylIwVZXRobmljaXR5X2Rlc2NyaXB0aW9ulEtlhpSM
+CXNlbGVjdGlvbpQpSv7///+GlGgNSwF1aB99lCiMCWZjaWRfY29kZZRLAYwDYWdllEsCjAZnZW5k
+ZXKUSwGMCWV0aG5pY2l0eZRLAYwGaGVpZ2h0lEsCjApib2R5d2VpZ2h0lEsCaFFLAowJRkNJRF9E
+ZXNjlEsBaFRLAXVoKn2UKIwDY2dulEsDjAtDR19TdWJncm91cJRLA3V1YmV1Lg==
+</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
